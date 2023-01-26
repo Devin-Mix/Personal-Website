@@ -22,7 +22,7 @@ a {
     overflow-wrap: break-word;
 }
 
-p, li, div {
+p, ul {
     text-align: left;
     line-height: 24px;
 }
