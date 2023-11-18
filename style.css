@@ -3,7 +3,6 @@ body {
     text-align: center;
     color: gainsboro;
     padding: 20px;
-    max-width: 720px;
     margin: auto;
     font-family: Georgia, serif;
     font-size: 16px;
@@ -12,7 +11,7 @@ body {
 
 h1, h2, h3, h4, h5, h6, b, strong {
     font-family: Georgia, serif;
-    color: skyblue;
+    color: darkviolet;
     text-decoration: none;
 }
 
