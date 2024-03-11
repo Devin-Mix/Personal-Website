@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>How To Build a Server Rack the Wrong Way</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="server rack, DIY, woodworking, Devin Mix">
+        <meta name="description" content="Describes how I built a server rack, and everything that went wrong along the way">
+        <meta name="author" content="Devin Mix">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <!--#include file="/header.html"-->
+        <h2>
+            How To Build a Server Rack the Wrong Way
+        </h2>
+        <h3>
+	    March 9, 2024
+	</h3>
+	<p>
+            A month or two ago, I inherited two network switches from work that were otherwise doomed for recycling. Both are Cisco 3750G-48PSes. In an enterprise environment they would be considered dated at best and a security vulnerability at worst on account of being EOL. For my own at-home learning needs though, they're a boon. Two bulletproof machines with 48 10/100/1000 Ethernet ports (all equipped with IEEE 802.3af PoE) plus four gigabit SFP ports far exceeds the networking requirements that my tiny lab needs. They also provide me with a way to practice for a potential CCNA, hence why they were passed on to me in the first place. The obvious costs associated with this come in the form of power consumption and fan noise, but with the room they're in being carpeted and my landlord paying the electric bill, neither is a huge issue.
+        </p>
+	<p>
+	    However, this post isn't about those. Rather, it's about how I manage them. Since moving into my current apartment, my lab has been relegated to a corner of the carpet in the office, tucked away next to the Verizon-provided router and the AC unit box it sits on. The location itself is far from an issue, but the inability to stack things has gradually led the pile to expand outward as new machines have been brought online. To consolidate, it was time to go vertical, and these switches provided the perfect excuse to do so. Accordingly, I got to work on exploring my options for rack mounting.
+	</p>
+	<h3>
+	    Alternative options
+	</h3>
+	<p>
+	    Initially, I considered buying rather than building a rack. Lack Racks have been popular for a while and require minimal assembly, but reports online indicated that newer revisions of the table have hollow legs and must therefore be supported by some sort of wooden insert. This, combined with the fact that they didn't quite match the style of other furniture that Erica and I have bought for the apartment, dissuaded me from making a trip down to Stoughton for one. Metal racks were an option, of course, but the cost was frankly prohibitive, and the visual appeal left much to be desired. Industrial products demand industrial prices, after all.
+	</p>
+	<p>
+	    Frustrated, I thought about my options for a few days before eventually saying "eh, how bad could it be?" Thus, I embarked on a quest to employ my <i>zero hours</i> of woodworking experience and build a rack.
+	</p>
+	<p>
+	    What could possibly go wrong?
+	</p>
+	<h3>
+	    R & D, hold the R
+	</h3>
+	<p>
+	    I decided that the best way for me to begin working on this was in some sort of CAD software, and therefore had a perfect excuse to try out Fusion 360. Frankly, I was impressed. Despite coming from a SolidWorks background (pointed looks to my expired CSWA) I found the interface to be extremely easy to navigate. The timeline feature and ability to rewind were particularly compelling and, admittedly, saved me on more than one occasion.
+	</p>
+	<p>
+	    Late at night on February 28th, I produced the following render:
+	</p>
+	<div style="width:100%;text-align:center;">
+		<a href="render.png">
+        	    <img src="render.png" width="50%" align="middle">
+       		</a>
+	</div>
+	<p>
+	    The plan was simple: 2x4s for horizontal support, 2x2s for the vertical posts, plywood for the top, some fancy legs (fastening methods for which were TBD), two Gator 6u rack rails off of Amazon, and a whole lot of deck screws. It wasn't set to be "pretty" in the way that your typical r/homelab "I built a rack" post is, but it would be functional, and I was happy.
+	</p>
+	<p>
+	    The eagle eyed among you may have already noticed the many issues with this plan. We'll address those in the order they arose.
+	</p>
+	<h3>
+	    Buying supplies (or, Sticker Shock)
+	</h3>
+	<p>
+	    Buying the materials necessary for the project was a special kind of hell. I spent over an hour at the Home Depot (on a <i>Friday</i>, nonetheless) trying to find the things I needed.
+	</p>
+	<p>
+	    Huge portions of that time were spent walking in circles trying to find the $4 2x4s their website had promised me. As an aside, that price should have absolutely been a red flag to me. When I told my coworkers I had hoped to build this for less than $50, they laughed and told me I'd be lucky to spend less than that on wood. I was ready to prove them wrong. As such, the wood I bought was not furniture-grade, but rather cheap support beams that were <i>extremely</i> warped. Once again, this is a critical detail that will prove relevant later.
+	</p>
+	<p>
+	    Once everything was accounted for, my final costs came out to around $120. Portions of that could have been avoided if this was not my first woodworking project, though. For instance, I now own a countersink drill bit that will not need to be re-purchased for my next go-around. As such, I could stomach the cost.
+	</p>
+	<h3>
+	    The Troubles Begin
+	</h3>
+	<p>
+	    It was around 7:00 when I got home with the supplies, so I decided to mark my cuts per the CAD model and call it a night. Thinking it wouldn't take long, I sharpened a carpenter's pencil and got to work.
+	</p>
+	<p>
+	    About an hour later, I realized something was wrong. The cuts for the legs were at a 45 degree angle, so I had purchased a speed square to mark them with. While doing so, I noticed that the length of the angled cut was short, and by a considerable margin at that. Having passed geometry ten or so years ago, I proceeded to measure the resulting triangle's other two sides as well.
+	</p>
+	<p>
+	    That, dear reader, is how I learned that a so-called 2x4 is not, in fact, two inches by four inches. As a quick Google confirmed, the typical 2x4 loses width during the cutting process, resulting in something more akin to a 1.5 by 3.5 inch cross-section.
+	</p>
+	<p>
+	    I immediately proceeded to check the 2x2s I'd bought as well. Sure enough, they were not two by two inches. While square, their sides came up short. To make things worse, their width did not match that of the short edge of the 2x4s.
+	</p>
+	<p>
+	    I have to confess that I should have stopped here. The pencil marks could have been erased, the supplies could have been returned, and the tools I'd loaned from my coworker could have been borrowed on a different weekend. With some time, adjustments to the CAD model, and potentially the guidance of a mentor, the mistakes of the past could be atoned for, and a better result could be produced. Frankly though, my biggest flaw is a lack of patience. Therefore, my next step was to adjust the CAD model's dimensions, re-measure every cut, and mark the whole thing again. I was committed (to a fault) to doing this in a weekend.
+	</p>
+	<h3>
+	    Assembly Day(s)
+	</h3>
+	<p>
+	    All things considered, the construction process began well. I woke up the next day with my pride a tad wounded but undeterred from moving forward. I made the cuts as marked using my coworker's Worx miter saw (which is a wonderful tool, by the way) with no issues and all of my fingers intact. Frustratingly, the plywood I had bought was warped beyond the point of being able to make a consistent measurement, let alone a decent cut. It therefore would not be used until the following day.
+	</p>
+	<p>
+	    There really isn't much to say about the assembly process itself. I made a few mistakes here and there though. For instance, there were several times in which I forgot to adjust the clutch of my drill, instead leaving it on full speed while driving the screws. This led to more than a few of them boring into the wood past the countersink I'd provided. Frankly, I'm shocked that the wood didn't split at any point, but the deep-sunken screws are admittedly a bit of an eyesore.
+	</p>
+	<p>
+	    By that evening, I had the following result:
+	</p>
+	<div style="width:100%;text-align:center;">
+		<a href="assembled.jpg">
+	            <img src="assembled.jpg" width="50%">
+		</a>
+	</div>
+	<p>
+	    Compared to the CAD model, it's obviously a downgrade. The undersized 2x2s look goofy, only a few (if any) of the boards are properly squared, and there were several improvisations and "bend it until it fits" situations. It is, however, sturdier than I expected and not the worst thing to look at compared to a pile on the floor.
+	</p>
+	<p>
+	    That night, I poured boiling water across one side of the plywood and pressed it under a guitar amp and fire safe to get it flat. Surprisingly enough that worked well, and I was able to cut it to an appropriate size the next day. However, with the changes to the design during assembly and the various shortcuts taken, the square-ish cuts made to the plywood did not line up with the frame at all. I ultimately decided that just dealing with it was the best option, so it was fit in a "good enough" way and screwed down.
+	</p>
+	<h3>
+	    Status report
+	</h3>
+	<p>
+	    Today, the project is very nearly complete. As I'm writing this, I'm waiting for the second (or possibly third) to last coat of paint to dry. I sanded everything down immediately following assembly and settled on Rust-oleum Kona Brown as a color. With a proper finish, it frankly looks a lot better, and I think it will be satisfactory once put in its final place. The flaws bother me, of course, but I'm regarding them as inspiration to do better in the future.
+	</p>
+	<h3>
+	    What I learned
+	</h3>
+	<p>
+	    Ultimately, this project has been an educational experience for me. Woodworking is a skill that, in my opinion, I needed to learn eventually. This was a straightforward, low-risk way to begin that journey, and in that sense, it's been a success. On top of that, I honestly had a good time doing it. Despite being annoyed by my mistakes at times, this was also an opportunity to exercise forgiveness with myself and be comfortable living with my mistakes. I regret not taking the time to re-evaluate my options and do things at a later date, but I made the choice I made and have grown comfortable living with it.
+	</p>
+	<p>
+	    Less philosophically, the key skills-based takeaways for me are as follows:
+		<ul>
+			<li>2x4s are not two inches by four inches, nor are 2x2s nominatively accurate. How one could attain such wood remains a mystery to me, but I suspect that increased costs or more specific tools may be involved.
+			<li>CAD work is important. However, cost constraints also merit consideration. Had I not been provided screws by my coworker, my costs would have been far higher. This was largely due to my failure to consider the cost of fasteners while designing.
+			<li>Angled cuts are not difficult when a miter saw is available. As such, using them to create more appropriate, durable, or accurate joins may be a good idea.
+			<li>Woodworking requires patience. Boards need to be flattened, measurements need to be checked, and so on. A rushed job is a sloppy job. Plan for a given project to take multiple weekends, but schedule time for other things while waiting.
+			<li>When assembling, measure carefully and often. Check your cuts, but don't trust them.
+			<li>Don't sand indoors. Wait for favorable weather and take it outside. Seriously, so much of what I own is now coated in a thin layer of dust. Also, consider loaning a rotary or orbital sander where possible and stomaching the cost of the pads. The time savings would have been immense for this project.
+			<li>Pocket screws may not be strictly necessary for every project, but they could save you money depending on the cost of screws long enough to pass completely through a board.
+		</ul>
+	</p>
+	<p>
+	    I'm not sure what exactly my next project will be from here will be. Maybe I'll revisit the rack this summer and try to make something better. In the meantime though, I have a rack that's functional enough, and I take pride in that.
+	</p>
+        <!--#include file="/footer.html"-->
+    </body>
+</html>
