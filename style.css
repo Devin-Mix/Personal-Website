@@ -36,3 +36,7 @@ table {
 td {
     text-align: center;
 }
+
+li + li {
+  margin-top: 10px;
+}
